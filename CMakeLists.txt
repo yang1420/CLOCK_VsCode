@@ -49,12 +49,27 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     Common/Com_debug.c
+    Application/Src/APP_freeRTOS.c
+
+    FreeRtos/Source/tasks.c
+    FreeRtos/Source/queue.c
+    FreeRtos/Source/list.c
+    FreeRtos/Source/timers.c
+    FreeRtos/Source/event_groups.c
+    FreeRtos/Source/stream_buffer.c
+    FreeRtos/portable/port.c
+    FreeRtos/portable/heap_4.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     Common
+    Application/Inc
+    FreeRtos
+    FreeRtos/include
+    FreeRtos/portable
+
 )
 
 # Add project symbols (macros)

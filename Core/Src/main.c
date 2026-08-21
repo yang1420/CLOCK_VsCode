@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Com_debug.h"
+#include "App_freeRTOS.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,8 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UART_Transmit(&huart1, (uint8_t *)"Hello World !\r\n", 15, HAL_MAX_DELAY);
-  debug_printf("Ni Hao Shi Jie !\r\n");
+ 
   /* USER CODE END 2 */
 
   /* Infinite loop */
