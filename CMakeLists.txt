@@ -50,6 +50,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     Common/Com_debug.c
     Application/Src/APP_freeRTOS.c
+    User/Soc/key.c
 
     FreeRtos/Source/tasks.c
     FreeRtos/Source/queue.c
@@ -66,6 +67,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     Common
     Application/Inc
+    User/Inc
     FreeRtos
     FreeRtos/include
     FreeRtos/portable

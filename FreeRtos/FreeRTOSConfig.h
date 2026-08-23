@@ -50,7 +50,7 @@
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES		( 5 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 17 * 1024 ) )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 10 * 1024 ) )
 #define configMAX_TASK_NAME_LEN		( 16 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		0
@@ -84,7 +84,7 @@ NVIC value of 255. */
 #define configLIBRARY_KERNEL_INTERRUPT_PRIORITY	15
 
 #define xPortPendSVHandler PendSV_Handler
-#define xPortSVCHandler SVC_Handler
+#define vPortSVCHandler SVC_Handler
 //开启freertos的功能
 #define  INCLUDE_xTaskGetSchedulerState 1
 #endif /* FREERTOS_CONFIG_H */

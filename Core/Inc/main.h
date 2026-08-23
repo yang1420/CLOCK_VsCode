@@ -57,6 +57,22 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Alarm_set_Pin GPIO_PIN_6
+#define Alarm_set_GPIO_Port GPIOA
+#define Alarm_EN_Pin GPIO_PIN_7
+#define Alarm_EN_GPIO_Port GPIOA
+#define UP_Pin GPIO_PIN_0
+#define UP_GPIO_Port GPIOB
+#define DOWN_Pin GPIO_PIN_1
+#define DOWN_GPIO_Port GPIOB
+#define TIME_SET_Pin GPIO_PIN_2
+#define TIME_SET_GPIO_Port GPIOB
+#define LED_ON_Pin GPIO_PIN_10
+#define LED_ON_GPIO_Port GPIOB
+#define LIGHT_Pin GPIO_PIN_11
+#define LIGHT_GPIO_Port GPIOB
+#define Alarm_5_Pin GPIO_PIN_8
+#define Alarm_5_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
