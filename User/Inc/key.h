@@ -9,7 +9,7 @@ typedef enum
   KEY_TIME_SET,       // represents a key press event, short press
   KEY_TIME_SET_LONG,  // represents a long key press event,long time press(3s)
   KEY_UP,             // 上调
-  KEY_DOWM,           // 下调
+  KEY_DOWN,           // 下调
   KEY_ALARM_SET,      // 时钟设置
   KEY_ALARM_SET_LONG, // 时钟设置长按
   KEY_ALARM_EN,       // 开启时钟
@@ -26,8 +26,8 @@ typedef enum
 
 typedef enum
 {
-    LINE_OFF = 0,
-    LINE_ON,
+    LIGHT_OFF = 0,
+    LIGHT_ON,
 
 }LIGHT_Type_value;
 
@@ -36,6 +36,8 @@ typedef enum
     @brief  :硬件初始化一般需要初始化方法，对应着GPIO引脚的初始化
 */
 void Inf_Key_Init(void);
+
+uint8_t Inf_getkey_long_press(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 
 
 
@@ -49,6 +51,6 @@ LED_ON_Type_value Inf_get_LED_Value(void);
 
 
 
-//获取灯的状态，返回值为LIGHT_Type_value类型，返回LINE_OFF表示灯关闭，返回LINE_ON表示灯开启
+//获取灯的状态，返回值为LIGHT_Type_value类型，返回LIGHT_OFF表示灯关闭，返回LIGHT_ON表示灯开启
 LIGHT_Type_value Inf_get_Light_Value(void);
 #endif /* KEY_H */
