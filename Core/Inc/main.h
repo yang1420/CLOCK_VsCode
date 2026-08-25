@@ -71,6 +71,8 @@ void Error_Handler(void);
 #define LED_ON_GPIO_Port GPIOB
 #define LIGHT_Pin GPIO_PIN_11
 #define LIGHT_GPIO_Port GPIOB
+#define TOUCH_Pin GPIO_PIN_14
+#define TOUCH_GPIO_Port GPIOB
 #define Alarm_5_Pin GPIO_PIN_8
 #define Alarm_5_GPIO_Port GPIOA
 
