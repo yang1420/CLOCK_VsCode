@@ -2,6 +2,7 @@
 #include "Com_debug.h"
 #include "Key.h"
 #include "touch.h"
+#include "mic.h"
 //
 //Just a test task;
 //
@@ -19,16 +20,16 @@ void task2(void *pvParameters)
     (void)pvParameters; // unused
     while (1)
     {
-        //测速触摸开关
-        if (Inf_get_Touch_Value() == TOUCH_PRESS)
+        if(Inf_get_Mic_Value()==MIC_ON)
         {
-             debug_printf("被触摸了\r\n");
+            debug_printf("Mic is ON,当前值是1\r\n");
         }
         else
         {
-             debug_printf("未被触摸\r\n");
+            debug_printf("Mic is OFF,当前值是0\r\n");
         }
-        vTaskDelay(pdMS_TO_TICKS(1000)); // Delay for 1000 ms
+      
+        vTaskDelay(pdMS_TO_TICKS(500)); // Delay for 500 ms
     }
 }
 

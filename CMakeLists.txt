@@ -62,6 +62,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     FreeRtos/portable/heap_4.c
     User/Soc/touch.c
     User/Inc/touch.h
+    User/Inc/mic.h
+    User/Soc/mic.c
 )
 
 # Add include paths
