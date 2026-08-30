@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "Com_debug.h"
 #include "App_freeRTOS.h"
+#include "DS1302z.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,6 +91,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+
  App_freeRTOS_Init();
   /* USER CODE END 2 */
 

@@ -64,6 +64,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User/Inc/touch.h
     User/Inc/mic.h
     User/Soc/mic.c
+    User/Inc/DS1302z.h
+    User/Soc/DS1302z.c
 )
 
 # Add include paths

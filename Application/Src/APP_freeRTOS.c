@@ -3,6 +3,7 @@
 #include "Key.h"
 #include "touch.h"
 #include "mic.h"
+#include "DS1302z.h"
 //
 //Just a test task;
 //
@@ -20,15 +21,12 @@ void task2(void *pvParameters)
     (void)pvParameters; // unused
     while (1)
     {
-        if(Inf_get_Mic_Value()==MIC_ON)
-        {
-            debug_printf("Mic is ON,当前值是1\r\n");
-        }
-        else
-        {
-            debug_printf("Mic is OFF,当前值是0\r\n");
-        }
-      
+       //测速实时时钟
+       DS1302Z_Write_Byte(DS1302Z_CONTROL_REG, 0x00);  // 关闭写保护
+
+       DS1302Z_Write_Byte(DS1302Z_YEAR_REG, 0x26);
+       uint8_t year = DS1302Z_Read_Byte(DS1302Z_YEAR_REG);
+       debug_printf("Current year: 0x%02X\r\n", year);
         vTaskDelay(pdMS_TO_TICKS(500)); // Delay for 500 ms
     }
 }

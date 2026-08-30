@@ -57,6 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define DS_CLK_Pin GPIO_PIN_0
+#define DS_CLK_GPIO_Port GPIOA
+#define DS_IO_Pin GPIO_PIN_1
+#define DS_IO_GPIO_Port GPIOA
+#define DS_RST_Pin GPIO_PIN_2
+#define DS_RST_GPIO_Port GPIOA
 #define Alarm_set_Pin GPIO_PIN_6
 #define Alarm_set_GPIO_Port GPIOA
 #define Alarm_EN_Pin GPIO_PIN_7
