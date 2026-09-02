@@ -1,6 +1,6 @@
 #include "DS1302z.h"
 
-void Inf_DS1302Z_Delay_us(uint32_t us)
+void Inf_Delay_us(uint32_t us)
 {
     // Assuming the system clock is 72 MHz, each iteration of the loop takes approximately 1/72,000,000 seconds.
     // To achieve a delay of 'us' microseconds, we need to loop for 'us * (72 / 1)' iterations.
@@ -24,7 +24,7 @@ uint8_t DS1302Z_Read_Byte(uint8_t reg_addr)
     DS_CLK_L;
     //2.拉高RST引脚，准备发送指令，，要延迟最少4us
     DS_RST_H;
-    Inf_DS1302Z_Delay_us(5);
+    Inf_Delay_us(5);
     //3.循环8次，低位优先发送指令
     //准备数据，然后在SCLK在上升沿的时候读取数据
     for (int i = 0; i < 8; i++)
@@ -38,7 +38,7 @@ uint8_t DS1302Z_Read_Byte(uint8_t reg_addr)
             DS_IO_L;
         }
         DS_CLK_H;
-        Inf_DS1302Z_Delay_us(1);
+        Inf_Delay_us(1);
 
         //4.重置时钟引脚，准备发送第二次数据
         DS_CLK_L;
@@ -75,7 +75,7 @@ void DS1302Z_Write_Byte(uint8_t reg_addr, uint8_t data)
     
     //2.拉高RST引脚，准备发送指令
     DS_RST_H;
-    Inf_DS1302Z_Delay_us(5);
+    Inf_Delay_us(5);
     //3.循环8次，低位优先发送指令
     for (int i = 0; i < 8; i++)
     {
@@ -88,7 +88,7 @@ void DS1302Z_Write_Byte(uint8_t reg_addr, uint8_t data)
             DS_IO_L;
         }
         DS_CLK_H;
-        Inf_DS1302Z_Delay_us(1);
+        Inf_Delay_us(1);
         DS_CLK_L;
     }
     //4.准备写数据
@@ -103,7 +103,7 @@ void DS1302Z_Write_Byte(uint8_t reg_addr, uint8_t data)
             DS_IO_L;
         }
         DS_CLK_H;
-        Inf_DS1302Z_Delay_us(1);
+        Inf_Delay_us(1);
         DS_CLK_L;
     }
     //5.拉低RST引脚，结束通信

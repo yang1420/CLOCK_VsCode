@@ -83,6 +83,8 @@ void Error_Handler(void);
 #define MIC_IN_GPIO_Port GPIOB
 #define TOUCH_Pin GPIO_PIN_14
 #define TOUCH_GPIO_Port GPIOB
+#define DHT11_DATA_Pin GPIO_PIN_15
+#define DHT11_DATA_GPIO_Port GPIOB
 #define Alarm_5_Pin GPIO_PIN_8
 #define Alarm_5_GPIO_Port GPIOA
 

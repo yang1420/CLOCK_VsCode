@@ -30,7 +30,7 @@
 
 
 //实现一个us延迟
-void Inf_DS1302Z_Delay_us(uint32_t us);
+void Inf_Delay_us(uint32_t us);
 
 //读取一个寄存器的值
 uint8_t DS1302Z_Read_Byte(uint8_t reg_addr);

@@ -66,6 +66,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User/Soc/mic.c
     User/Inc/DS1302z.h
     User/Soc/DS1302z.c
+    User/Inc/DHT11.h
+    User/Soc/DHT11.c
 )
 
 # Add include paths
