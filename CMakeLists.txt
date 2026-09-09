@@ -68,6 +68,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User/Soc/DS1302z.c
     User/Inc/DHT11.h
     User/Soc/DHT11.c
+    User/Inc/NV020D.h
+    User/Soc/NV020D.c
 )
 
 # Add include paths

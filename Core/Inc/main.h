@@ -63,6 +63,12 @@ void Error_Handler(void);
 #define DS_IO_GPIO_Port GPIOA
 #define DS_RST_Pin GPIO_PIN_2
 #define DS_RST_GPIO_Port GPIOA
+#define NVD_BUSY_Pin GPIO_PIN_3
+#define NVD_BUSY_GPIO_Port GPIOA
+#define NVD_CLK_Pin GPIO_PIN_4
+#define NVD_CLK_GPIO_Port GPIOA
+#define NVD_SDA_Pin GPIO_PIN_5
+#define NVD_SDA_GPIO_Port GPIOA
 #define Alarm_set_Pin GPIO_PIN_6
 #define Alarm_set_GPIO_Port GPIOA
 #define Alarm_EN_Pin GPIO_PIN_7
